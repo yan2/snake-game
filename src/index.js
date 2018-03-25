@@ -1,6 +1,6 @@
 import Game from "./js/game";
-const numRows = 50;
-const numCols = 50;
 
-var playGame = new Game(numRows,numCols);
-playGame.setUpGame();
+const ROWS = 50;
+const COLS = 50;
+
+var playGame = new Game(ROWS, COLS);

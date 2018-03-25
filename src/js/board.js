@@ -6,9 +6,9 @@ export default class {
     constructor(numRows, numCols) {
         this.numRows = numRows
         this.numCols = numCols
-        const padding = 50;
-        const canvasHeight = Math.floor((window.innerHeight - padding)/this.numRows)*this.numRows
-        this.boxSize = canvasHeight/this.numRows
+        const padding = 50
+        const canvasHeight = Math.floor((window.innerHeight - padding) / this.numRows) * this.numRows
+        this.boxSize = canvasHeight / this.numRows
         const canvasWidth = this.boxSize * this.numCols
 
         // create canvas
