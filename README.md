@@ -26,7 +26,7 @@ This code is written in ES6. For readability and modularity, I created classes f
 
 ## If I had more time
 Below are just a few things I would consider if I had more time.
-- Make configurations points easier to change by creating a separate config file to hold all configurable variables (e.g. canvas size, colors, fps, etc). These are currently defined as constants in each module. 
+- Make configurations points easier to change by creating a separate config file to hold all configurable variables (e.g. canvas size, colors, fps, etc). These are currently defined as constants in each module. I could also add them as options in the UI. 
 - Use a transpiler such as Babel to transpile the code so that it can be run in browsers that don't support all ES6 syntax. 
 - Consider changing game loop to use time logic as opposed to a ```setTimeout()``` function. 
 - Add UI tests for each component. 

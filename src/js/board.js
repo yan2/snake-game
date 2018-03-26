@@ -23,12 +23,12 @@ export default class {
     }    
 
     draw(x, y) {
-         drawBox(x, y, BOARD_COLOR, this.context, this.boxSize)
-    }
+       drawBox(x, y, BOARD_COLOR, this.context, this.boxSize)
+   }
 
-    reset() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
-        this.context.fillStyle = BOARD_COLOR
-        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
-    }
+   reset() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    this.context.fillStyle = BOARD_COLOR
+    this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
+}
 }

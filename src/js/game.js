@@ -19,12 +19,13 @@ export default class {
         document.getElementById("start").addEventListener("click", () => {this.startGame()})
         document.getElementById("message").innerHTML = "Use the keyboard arrow keys to move the snake to eat food!"
     }
+    
     startGame() {
         this.reset()
         this.snake = new Snake('right', 0, 0)
         this.food = new Food(this.rows, this.cols)
-        this.overlay.style.display = "none";
-        this.gameLoop();
+        this.overlay.style.display = "none"
+        this.gameLoop()
 
         window.onkeydown = (e) => {
             let keyCodes = {
@@ -59,7 +60,7 @@ export default class {
                 this.endGame()
                 return
             } else if (this.snake.ateFood(this.food)) {
-                this.updateScore(SCORE_INCREASE);
+                this.updateScore(SCORE_INCREASE)
                 this.food = new Food(this.board.numCols, this.board.numRows)
             } else {
                 let temp = this.snake.snakeArr.shift()
@@ -73,7 +74,7 @@ export default class {
     endGame() {
         cancelAnimationFrame(this.anim)
         this.board.reset()
-        document.getElementById("message").innerHTML = "Game over! Your final score is " + this.score
+        document.getElementById("message").innerHTML = "Game over! Your final score is " + this.score 
         this.overlay.style.display = "flex"
     }
 
