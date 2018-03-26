@@ -13,7 +13,7 @@ export default class {
         this.overlay = document.getElementById('overlay')
         this.snake
         this.food 
-        this.points = 0
+        this.score = 0
         this.anim
 
         document.getElementById("start").addEventListener("click", () => {this.startGame()})
@@ -40,14 +40,14 @@ export default class {
         }
     }
 
-    updateScore(points) {
-        this.points += points;
-        document.getElementById("points").innerHTML = this.points
+    updateScore(score) {
+        this.score += score;
+        document.getElementById("score").innerHTML = this.score
     }
 
     resetScore() {
-        this.points = 0
-        document.getElementById("points").innerHTML = this.points
+        this.score = 0
+        document.getElementById("score").innerHTML = this.score
     }
 
     gameLoop() {
@@ -73,7 +73,7 @@ export default class {
     endGame() {
         cancelAnimationFrame(this.anim)
         this.board.reset()
-        document.getElementById("message").innerHTML = "Game over! You earned " + this.points + " total points."
+        document.getElementById("message").innerHTML = "Game over! Your final score is " + this.score
         this.overlay.style.display = "flex"
     }
 

@@ -1,8 +1,14 @@
 body {
 	text-align: center;
-	font-family: 'Helvetiva', sans-serif;
-	max-height: 100%;
+	font-family: 'Helvetica', sans-serif;
+	height: 100vh;
 	overflow: hidden;
+	background: rgb(251,251,213); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(251,251,213,1) 0%, rgba(247,179,160,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(251,251,213,1) 0%,rgba(247,179,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(251,251,213,1) 0%,rgba(247,179,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbd5', endColorstr='#f7b3a0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: rgb(51, 51, 51);
 }
 
 .game-overlay {
@@ -16,10 +22,6 @@ body {
 	height: 100%;
 }
 
-.game-points {
-	/*line-height: 1;*/
-}
-
 .game-message {
 	padding: 0 20em;
 }
@@ -30,7 +32,11 @@ button {
 	outline: none;
 	box-shadow: none;
 	max-width: 50%;
-	background: #E1A9A8;
+	background: #FBFBD5;
 	padding: 1em 3em;
 	font-size: 1rem;
+	font-size: 1rem;
+	border-radius: 2px;
+	border: none;;
+	box-shadow: 1px 4px 1px rgba(186,140,139,1);
 }

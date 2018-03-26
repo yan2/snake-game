@@ -1,6 +1,7 @@
 import {drawBox} from './utils'
 
-const BOARD_COLOR = '#FDF5E0'
+// const BOARD_COLOR = '#FDF5E0'
+const BOARD_COLOR = 'rgba(255,255,255,.4)'
 
 export default class {
     constructor(numRows, numCols) {
@@ -16,8 +17,9 @@ export default class {
         document.body.appendChild(this.canvas)
         this.canvas.width = canvasWidth
         this.canvas.height = canvasHeight
-        this.canvas.setAttribute("style", "border: 1px solid black")
+        this.canvas.setAttribute("style", "border: 6px solid rgba(255,255,255,.65)")
         this.context = this.canvas.getContext('2d')
+        this.reset()
     }    
 
     draw(x, y) {
@@ -25,6 +27,7 @@ export default class {
     }
 
     reset() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
         this.context.fillStyle = BOARD_COLOR
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
     }

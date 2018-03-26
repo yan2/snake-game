@@ -1,7 +1,8 @@
 import {drawBox} from './utils'
 
 const SNAKE_COLOR = '#92B5D1'
-
+const yellow = '#F6FB7B'
+const purple = '#A0BBD6'
 export default class {
     constructor(direction, posX, posY)  {
         this.posX = posX //head x position 
